@@ -5,7 +5,16 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* <Text style={styles.text}>Hello!!!</Text>
+      <Text style={styles.text}>Hello!!!</Text> */}
+
+      <View style={styles.yellowView}>
+        <Text>Hello!!!</Text>
+      </View>
+      <View style={styles.blueView}>
+        <Text>Hello!!!</Text>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +23,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // flexDirection: "row", //참고
+    // backgroundColor: 'green',
+    // alignItems: 'center',
+    // justifyContent: 'center'
+    // color:"white" //이건적용안됨(기존같았으면 부모의 상속때문에 적용됐지만 리엑트라 주의!)
   },
+  // text: {
+  //   color: "black"
+  // }
+  yellowView: {
+    flex: 3,
+    backgroundColor: "yellow"
+  },
+  blueView: {
+    flex: 2,
+    backgroundColor: "blue"
+  }
 });
